@@ -14,4 +14,9 @@ size_mr_data <- data.frame(
     
 plot(size_mr_data)
 
-plot(log(size_mr_data))
+plot(log(size_mr_data), aes(x = "log body mass", ylab = "log metabolic rate"))
+     
+plot(log(size_mr_data), log = "xy", xlab = "log body mass", ylab = "log metabolic rate", 
+       geom_point(alpha = 5)
+     
+     
