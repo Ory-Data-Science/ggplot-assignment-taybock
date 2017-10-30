@@ -5,5 +5,4 @@ library(tidyverse)
 dat <- read.csv(url("http://esapubs.org/archive/ecol/E084/093/Mammal_lifehistories_v2.txt"), 
                 sep = "\t", nrows = 1440, na.strings = c("-999.00", "999.00"))
 
-ggplot(data = dat) + 
-  geom_point(mapping = aes(x = adult_mass, y = child_mass))
+ggplot(data = dat) + geom_point(mapping = aes(x = "mass(g)", y = "newborn(g)"))
