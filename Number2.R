@@ -12,4 +12,6 @@ size_mr_data <- data.frame(
     200.830, 224.779, 148.940, 112.430, 286.847, 46.347, 142.863, 
     106.670, 119.660, 104.150, 33.165, 4.900, 4.865))
     
-plot(body_mass, metabolic_rate)
+plot(size_mr_data)
+
+plot(log(size_mr_data))
