@@ -12,9 +12,14 @@ size_mr_data <- data.frame(
     200.830, 224.779, 148.940, 112.430, 286.847, 46.347, 142.863, 
     106.670, 119.660, 104.150, 33.165, 4.900, 4.865))
     
-plot(size_mr_data)
+ggplot(size_mr_data)
 
-plot(log(size_mr_data), aes(x = "log body mass", ylab = "log metabolic rate"))
+ggplot(data = size_mr_data) + 
+  geom_point(mapping = aes(x = body_mass, y = metabolic_rate))
+
+
+
+ggplot(log(size_mr_data), aes(x = "log body mass", ylab = "log metabolic rate"))
      
 plot(log(size_mr_data), log = "xy", xlab = "log body mass", ylab = "log metabolic rate", 
        geom_point(alpha = 5)
