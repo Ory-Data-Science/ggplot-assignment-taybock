@@ -23,3 +23,12 @@ ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
   scale_x_log10() +
   scale_y_log10() +
   geom_point(aes(color= order))
+
+#add facet wrap thing
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
+  labs(x = "Adult Mass", y = "Newborn Mass") +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_point(aes(color= order)) +   facet_wrap(~ order, nrow = 4, ncol = 5)
+
+
