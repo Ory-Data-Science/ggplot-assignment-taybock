@@ -10,9 +10,16 @@ ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
   geom_point()
 
 
-
+#scale logarithmically
 ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
   labs(x = "Adult Mass", y = "Newborn Mass") +
 scale_x_log10() +
   scale_y_log10() +
   geom_point()
+
+#same but with colors
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
+  labs(x = "Adult Mass", y = "Newborn Mass") +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_point(aes(color= order))
