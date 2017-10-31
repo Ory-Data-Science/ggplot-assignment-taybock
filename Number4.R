@@ -5,4 +5,10 @@ library(tidyverse)
 dat <- read.csv(url("http://www.esapubs.org/archive/ecol/E088/096/avian_ssd_jan07.txt"),
                 sep = "\t", na.strings = c("-999.00", "999.00", "-999", "999"))
 
-#your code goes here
+#histogram of females
+ggplot(data = dat, aes(x = F_mass)) + labs(x = "Female Mass g") +
+  geom_histogram()
+
+#scaled to log
+ggplot(data = dat, aes(x = F_mass)) + labs(x = "Female Mass g") +
+  geom_histogram() +  scale_x_log10()
